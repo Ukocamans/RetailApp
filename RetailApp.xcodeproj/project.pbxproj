@@ -11,6 +11,7 @@
 		1C8013BF272F530700A0B374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013BD272F530700A0B374 /* Main.storyboard */; };
 		1C8013C1272F530800A0B374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013C0272F530800A0B374 /* Assets.xcassets */; };
 		1C8013C4272F530800A0B374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013C2272F530800A0B374 /* LaunchScreen.storyboard */; };
+		1C801426272F571300A0B374 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C801425272F571300A0B374 /* Core.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1C8013C0272F530800A0B374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C8013C3272F530800A0B374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C8013C5272F530800A0B374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C801425272F571300A0B374 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C801426272F571300A0B374 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 			children = (
 				1C8013B6272F530700A0B374 /* RetailApp */,
 				1C8013B5272F530700A0B374 /* Products */,
+				1C801424272F571300A0B374 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +103,14 @@
 				1C8013C5272F530800A0B374 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C801424272F571300A0B374 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C801425272F571300A0B374 /* Core.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ukocaman.RetailApp.RetailApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -345,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ukocaman.RetailApp.RetailApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
