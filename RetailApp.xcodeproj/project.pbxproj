@@ -39,6 +39,8 @@
 		1CD87A1F27306FC800DE3ED5 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A1D27306FC800DE3ED5 /* CartCell.swift */; };
 		1CD87A2027306FC800DE3ED5 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD87A1E27306FC800DE3ED5 /* CartCell.xib */; };
 		1CD87A2F273085D500DE3ED5 /* RetailAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */; };
+		1CD87A3D273088B300DE3ED5 /* ProductListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A3C273088B300DE3ED5 /* ProductListViewControllerTests.swift */; };
+		1CD87A4527308A5100DE3ED5 /* ProductListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A4427308A5100DE3ED5 /* ProductListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		1CD87A2C273085D500DE3ED5 /* RetailAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailAppTests.swift; sourceTree = "<group>"; };
 		1CD87A30273085D500DE3ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD87A3C273088B300DE3ED5 /* ProductListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTests.swift; sourceTree = "<group>"; };
+		1CD87A4427308A5100DE3ED5 /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,10 +350,44 @@
 		1CD87A2D273085D500DE3ED5 /* RetailAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				1CD87A382730884000DE3ED5 /* Scenes */,
 				1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */,
 				1CD87A30273085D500DE3ED5 /* Info.plist */,
 			);
 			path = RetailAppTests;
+			sourceTree = "<group>";
+		};
+		1CD87A382730884000DE3ED5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A392730885200DE3ED5 /* ProductList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1CD87A392730885200DE3ED5 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A3B2730886000DE3ED5 /* ViewModel */,
+				1CD87A3A2730885C00DE3ED5 /* View */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		1CD87A3A2730885C00DE3ED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A3C273088B300DE3ED5 /* ProductListViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CD87A3B2730886000DE3ED5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A4427308A5100DE3ED5 /* ProductListViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +524,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CD87A2F273085D500DE3ED5 /* RetailAppTests.swift in Sources */,
+				1CD87A3D273088B300DE3ED5 /* ProductListViewControllerTests.swift in Sources */,
+				1CD87A4527308A5100DE3ED5 /* ProductListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

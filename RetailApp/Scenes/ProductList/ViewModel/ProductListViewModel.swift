@@ -42,7 +42,8 @@ final class ProductListViewModel: ProductListViewModelProtocol {
                 self.products = self.createProductItems(model: model)
                 self.delegate?.handleViewModelOutput(output: .finished)
             case .failure(let error):
-                dump(error)
+                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: error.localizedDescription])
+                self.delegate?.handleViewModelOutput(output: .error(error))
             case .empty:
                 print("empty")
             }

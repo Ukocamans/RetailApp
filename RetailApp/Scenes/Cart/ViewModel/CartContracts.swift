@@ -16,8 +16,8 @@ protocol CartViewModelDelegate: AnyObject {
     func handleViewModelOutput(output: CartViewModelOutput)
 }
 
-enum CartViewModelOutput {
+enum CartViewModelOutput: Equatable {
     case setLoading(Bool)
     case finished
-    case error(Error)
+    case error(NSError)
 }

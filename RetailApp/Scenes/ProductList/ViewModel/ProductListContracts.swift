@@ -18,9 +18,9 @@ protocol ProductListViewModelDelegate: AnyObject {
     func handleViewModelOutput(output: ProductListViewModelOutput)
 }
 
-enum ProductListViewModelOutput {
+enum ProductListViewModelOutput: Equatable {
     case setLoading(Bool)
     case finished
-    case error(Error)
+    case error(NSError)
     case askNavigationTo(UIViewController)
 }
