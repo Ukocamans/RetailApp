@@ -42,7 +42,7 @@ class URLRequestBuilder<RM: Codable> {
         var request = URLRequest(url: url)
         request.httpMethod = self.httpMethod?.rawValue
         request.httpBody = httpMethod == .get ? nil : body
-        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
     }
     
