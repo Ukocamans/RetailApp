@@ -9,10 +9,10 @@ import UIKit
 
 class ProductCell: UICollectionViewCell {
 
-    @IBOutlet private weak var imageViewProduct: UIImageView!
-    @IBOutlet private weak var labelTitle: UILabel!
-    @IBOutlet private weak var labelPrice: UILabel!
-    @IBOutlet private weak var buttonAdd: UIButton!
+    @IBOutlet private(set) weak var imageViewProduct: UIImageView!
+    @IBOutlet private(set) weak var labelTitle: UILabel!
+    @IBOutlet private(set) weak var labelPrice: UILabel!
+    @IBOutlet private(set) weak var buttonAdd: UIButton!
     
     private var model: ProductItemModel?
     private var dataTask: URLSessionDataTask?
