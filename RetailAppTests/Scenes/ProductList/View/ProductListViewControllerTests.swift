@@ -36,6 +36,4 @@ private final class MockProductListViewModel: ProductListViewModelProtocol {
     func getProducts() -> [ProductItemModel] {
         []
     }
-    
-    
 }
