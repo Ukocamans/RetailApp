@@ -32,6 +32,10 @@
 		1C8014C22730604C00A0B374 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C02730604C00A0B374 /* UIViewControllerExtension.swift */; };
 		1C8014C52730612A00A0B374 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C42730612A00A0B374 /* CartManager.swift */; };
 		1C8014CA273061C000A0B374 /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C9273061C000A0B374 /* CartItemModel.swift */; };
+		1CD87A102730678500DE3ED5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A0E2730678500DE3ED5 /* CartViewController.swift */; };
+		1CD87A112730678500DE3ED5 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD87A0F2730678500DE3ED5 /* CartViewController.xib */; };
+		1CD87A15273068A600DE3ED5 /* CartContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A14273068A600DE3ED5 /* CartContracts.swift */; };
+		1CD87A18273068B400DE3ED5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A17273068B400DE3ED5 /* CartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		1C8014C02730604C00A0B374 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1C8014C42730612A00A0B374 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		1C8014C9273061C000A0B374 /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
+		1CD87A0E2730678500DE3ED5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		1CD87A0F2730678500DE3ED5 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		1CD87A14273068A600DE3ED5 /* CartContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContracts.swift; sourceTree = "<group>"; };
+		1CD87A17273068B400DE3ED5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		1C8013CF272F535400A0B374 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1CD87A0B2730676200DE3ED5 /* Cart */,
 				1C80148D272FE7C600A0B374 /* ProductList */,
 			);
 			path = Scenes;
@@ -254,6 +263,33 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		1CD87A0B2730676200DE3ED5 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A0D2730677000DE3ED5 /* ViewModel */,
+				1CD87A0C2730676B00DE3ED5 /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		1CD87A0C2730676B00DE3ED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A0E2730678500DE3ED5 /* CartViewController.swift */,
+				1CD87A0F2730678500DE3ED5 /* CartViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CD87A0D2730677000DE3ED5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A14273068A600DE3ED5 /* CartContracts.swift */,
+				1CD87A17273068B400DE3ED5 /* CartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +351,7 @@
 				1C8014A7272FF2BE00A0B374 /* ProductCell.xib in Resources */,
 				1C8014AD2730499C00A0B374 /* ProductListViewController.xib in Resources */,
 				1C8014B92730600E00A0B374 /* LoadingViewController.xib in Resources */,
+				1CD87A112730678500DE3ED5 /* CartViewController.xib in Resources */,
 				1C8013C1272F530800A0B374 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,9 +372,12 @@
 				1C801485272FE53000A0B374 /* ReusableView.swift in Sources */,
 				1C80147D272FE4DA00A0B374 /* UICollectionViewExtension.swift in Sources */,
 				1C801488272FE62000A0B374 /* UITableViewExtension.swift in Sources */,
+				1CD87A18273068B400DE3ED5 /* CartViewModel.swift in Sources */,
+				1CD87A102730678500DE3ED5 /* CartViewController.swift in Sources */,
 				1C8014B227304CAD00A0B374 /* ProductItemModel.swift in Sources */,
 				1C8013B8272F530700A0B374 /* AppDelegate.swift in Sources */,
 				1C80149A272FE82D00A0B374 /* ProductListViewModel.swift in Sources */,
+				1CD87A15273068A600DE3ED5 /* CartContracts.swift in Sources */,
 				1C801497272FE82100A0B374 /* ProductListContracts.swift in Sources */,
 				1C801492272FE80700A0B374 /* ProductListViewController.swift in Sources */,
 				1C8014CA273061C000A0B374 /* CartItemModel.swift in Sources */,

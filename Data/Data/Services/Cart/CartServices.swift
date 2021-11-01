@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-protocol CartServicesProtocol {
+public protocol CartServicesProtocol {
     func order(requestModel: OrderRequestModel, completion: @escaping (NetworkResult<OrderResponseModel>) -> Void)
 }
 

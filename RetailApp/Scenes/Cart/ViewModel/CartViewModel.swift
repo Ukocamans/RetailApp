@@ -1,5 +1,5 @@
 //
-//  ProductListViewModel.swift
+//  CartViewModel.swift
 //  RetailApp
 //
 //  Created by Umurcan Kocaman [Bireysel Mobil Bankacilik Squad 2] on 1.11.2021.
@@ -8,13 +8,12 @@
 import Foundation
 import Data
 
-final class ProductListViewModel: ProductListViewModelProtocol {
-    weak var delegate: ProductListViewModelDelegate?
-    private let productServices: ProductServicesProtocol
-    private var products: [ProductItemModel] = []
+final class CartViewModel: CartViewModelProtocol {
+    weak var delegate: CartViewModelDelegate?
+    private let cartServices: CartServicesProtocol
     
-    init(productServices: ProductServicesProtocol) {
-        self.productServices = productServices
+    init(cartServices: CartServicesProtocol) {
+        self.cartServices = cartServices
     }
     
     private func createProductItems(model: ProductListResponseModel) -> [ProductItemModel] {
@@ -27,26 +26,23 @@ final class ProductListViewModel: ProductListViewModelProtocol {
         }
     }
     
-    func loadData() {
+    func order() {
+        let requestModel: OrderRequestModel = []
         delegate?.handleViewModelOutput(output: .setLoading(true))
-        productServices.listing { [weak self] (result) in
+        cartServices.order(requestModel: requestModel) { [weak self] (result) in
             guard let self = self else {
                 return
             }
             self.delegate?.handleViewModelOutput(output: .setLoading(false))
             switch result {
-            case.success(let model):
-                self.products = self.createProductItems(model: model)
-                self.delegate?.handleViewModelOutput(output: .finished)
+            case .success(let model):
+                dump(model)
             case .failure(let error):
+                self.delegate?.handleViewModelOutput(output: .error(error))
                 dump(error)
             case .empty:
                 print("empty")
             }
         }
-    }
-    
-    func getProducts() -> [ProductItemModel] {
-        products
     }
 }

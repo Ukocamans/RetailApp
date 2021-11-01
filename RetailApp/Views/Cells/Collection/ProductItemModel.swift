@@ -13,13 +13,12 @@ struct ProductItemModel {
     let url: String?
     let title: String?
     let price: String?
-    let action: (() -> Void)?
+    var action: (() -> Void)?
     
-    init(with model: ProductModel, action: (() -> Void)?) {
+    init(with model: ProductModel) {
         self.id = model.id ?? -1
         self.url = model.image
         self.title = model.name
         self.price = (model.price ?? "") + " " + (model.currency ?? "")
-        self.action = action
     }
 }
