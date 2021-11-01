@@ -20,13 +20,11 @@ public enum NetworkResult<T> {
     case empty
 }
 
-open class NetworkRequest<RM: Codable, M: Codable>: Request {
+open class NetworkRequest<RM: Codable, M: Codable>: NSObject, Request, URLSessionDelegate {
     
-    public init() {
+    override public init() {
         
     }
-    
-    var urlSession = URLSession.shared
     
     public var endpoint: String = ""
     public var httpMethod: HTTPMethod = .get
@@ -61,7 +59,9 @@ open class NetworkRequest<RM: Codable, M: Codable>: Request {
     }
     
     private func call(_ request: URLRequest, deliverQueue: DispatchQueue = DispatchQueue.main, completion: @escaping (NetworkResult<Data>) -> Void) {
-        urlSession.dataTask(with: request) { (data, _, error) in
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration, delegate: self, delegateQueue: .main)
+        session.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 deliverQueue.async {
                     completion(.failure(error))
@@ -78,4 +78,8 @@ open class NetworkRequest<RM: Codable, M: Codable>: Request {
         }.resume()
     }
     
+    //Need for self signed certificate
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+    }
 }

@@ -12,7 +12,7 @@ class URLRequestBuilder<RM: Codable> {
     var url: URL?
     var body: Data?
     var httpMethod: HTTPMethod?
-    var baseURL: String = "https://api.themoviedb.org"
+    var baseURL: String = "https://nonchalant-fang.glitch.me/"
     var endpoint: String = ""
     
     init(endpoint: String) {
@@ -55,7 +55,11 @@ class URLRequestBuilder<RM: Codable> {
             guard let parameters = reqModel.dictionary as? [String: String] else {
                 fatalError("parameters for GET http method must conform to [String: String]")
             }
-            urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+            if !parameters.isEmpty {
+                urlComponents?.queryItems = parameters.map {
+                    URLQueryItem(name: $0.key, value: $0.value)
+                }
+            }
         }
         
         return urlComponents?.url
