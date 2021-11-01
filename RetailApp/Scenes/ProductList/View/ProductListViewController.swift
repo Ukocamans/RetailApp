@@ -22,6 +22,7 @@ final class ProductListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Ürünler"
         viewModel.loadData()
         configureCollectionView()
     }
@@ -35,11 +36,12 @@ final class ProductListViewController: UIViewController {
 
 extension ProductListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getProducts().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: viewModel.getProducts()[indexPath.row])
         return cell
     }
 }
@@ -57,7 +59,7 @@ extension ProductListViewController: ProductListViewModelDelegate {
             print(isLoading)
         case .finished:
             // do something
-            print("finished")
+            collectionView.reloadData()
         case .error(let error):
             dump(error)
         }

@@ -9,12 +9,20 @@ import Foundation
 import Data
 
 final class ProductListViewModel: ProductListViewModelProtocol {
-    
     weak var delegate: ProductListViewModelDelegate?
     private let productServices: ProductServicesProtocol
+    private var products: [ProductItemModel] = []
     
     init(productServices: ProductServicesProtocol) {
         self.productServices = productServices
+    }
+    
+    private func createProductItems(model: ProductListResponseModel) -> [ProductItemModel] {
+        return model.map { (model) -> ProductItemModel in
+            ProductItemModel(with: model) {
+                print("add")
+            }
+        }
     }
     
     func loadData() {
@@ -26,7 +34,7 @@ final class ProductListViewModel: ProductListViewModelProtocol {
             self.delegate?.handleViewModelOutput(output: .setLoading(false))
             switch result {
             case.success(let model):
-                dump(model)
+                self.products = self.createProductItems(model: model)
                 self.delegate?.handleViewModelOutput(output: .finished)
             case .failure(let error):
                 dump(error)
@@ -34,5 +42,9 @@ final class ProductListViewModel: ProductListViewModelProtocol {
                 print("empty")
             }
         }
+    }
+    
+    func getProducts() -> [ProductItemModel] {
+        products
     }
 }

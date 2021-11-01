@@ -10,6 +10,7 @@ import Foundation
 protocol ProductListViewModelProtocol {
     var delegate: ProductListViewModelDelegate? { get set }
     func loadData()
+    func getProducts() -> [ProductItemModel]
 }
 
 protocol ProductListViewModelDelegate: AnyObject {

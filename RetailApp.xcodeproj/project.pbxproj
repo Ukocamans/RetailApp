@@ -24,6 +24,7 @@
 		1C8014A6272FF2BE00A0B374 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014A4272FF2BE00A0B374 /* ProductCell.swift */; };
 		1C8014A7272FF2BE00A0B374 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8014A5272FF2BE00A0B374 /* ProductCell.xib */; };
 		1C8014AD2730499C00A0B374 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8014AB2730499C00A0B374 /* ProductListViewController.xib */; };
+		1C8014B227304CAD00A0B374 /* ProductItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014B127304CAD00A0B374 /* ProductItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1C8014A4272FF2BE00A0B374 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		1C8014A5272FF2BE00A0B374 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		1C8014AB2730499C00A0B374 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
+		1C8014B127304CAD00A0B374 /* ProductItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				1C8014A4272FF2BE00A0B374 /* ProductCell.swift */,
 				1C8014A5272FF2BE00A0B374 /* ProductCell.xib */,
+				1C8014B127304CAD00A0B374 /* ProductItemModel.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				1C801485272FE53000A0B374 /* ReusableView.swift in Sources */,
 				1C80147D272FE4DA00A0B374 /* UICollectionViewExtension.swift in Sources */,
 				1C801488272FE62000A0B374 /* UITableViewExtension.swift in Sources */,
+				1C8014B227304CAD00A0B374 /* ProductItemModel.swift in Sources */,
 				1C8013B8272F530700A0B374 /* AppDelegate.swift in Sources */,
 				1C80149A272FE82D00A0B374 /* ProductListViewModel.swift in Sources */,
 				1C801497272FE82100A0B374 /* ProductListContracts.swift in Sources */,

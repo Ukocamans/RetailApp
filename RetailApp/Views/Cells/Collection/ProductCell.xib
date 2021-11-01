@@ -24,23 +24,27 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApZ-AF-zax">
-                        <rect key="frame" x="16" y="128" width="150" height="23"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                        <rect key="frame" x="16" y="128" width="150" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2G-id-ZN7">
-                        <rect key="frame" x="16" y="163" width="62" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W2G-id-ZN7">
+                        <rect key="frame" x="16" y="158" width="67" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-6I-IAe">
-                        <rect key="frame" x="90" y="158.5" width="80" height="30"/>
+                        <rect key="frame" x="95" y="152" width="75" height="28"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="9tn-Yc-MD2"/>
+                            <constraint firstAttribute="width" constant="75" id="9tn-Yc-MD2"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="Sepete Ekle"/>
+                        <connections>
+                            <action selector="actionAdd:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bK1-H5-jt2"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -55,11 +59,16 @@
                 <constraint firstItem="ApZ-AF-zax" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="dZx-jC-qe0"/>
                 <constraint firstAttribute="trailing" secondItem="ApZ-AF-zax" secondAttribute="trailing" constant="16" id="jjZ-Zt-fjA"/>
                 <constraint firstItem="W2G-id-ZN7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="knL-8a-Vwc"/>
-                <constraint firstAttribute="bottom" secondItem="W2G-id-ZN7" secondAttribute="bottom" constant="16" id="maV-Pz-lTD"/>
                 <constraint firstAttribute="trailing" secondItem="Nre-6I-IAe" secondAttribute="trailing" constant="12" id="oB8-Dm-ZqP"/>
                 <constraint firstItem="WUA-N6-IhU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="qEj-4B-NGb"/>
             </constraints>
             <size key="customSize" width="159" height="204"/>
+            <connections>
+                <outlet property="buttonAdd" destination="Nre-6I-IAe" id="9Px-L5-INq"/>
+                <outlet property="imageViewProduct" destination="WUA-N6-IhU" id="AXa-Sa-SKN"/>
+                <outlet property="labelPrice" destination="W2G-id-ZN7" id="L2i-O2-iMW"/>
+                <outlet property="labelTitle" destination="ApZ-AF-zax" id="Ap3-GU-y9j"/>
+            </connections>
             <point key="canvasLocation" x="215.94202898550725" y="192.1875"/>
         </collectionViewCell>
     </objects>

@@ -9,9 +9,35 @@ import UIKit
 
 class ProductCell: UICollectionViewCell {
 
+    @IBOutlet private weak var imageViewProduct: UIImageView!
+    @IBOutlet private weak var labelTitle: UILabel!
+    @IBOutlet private weak var labelPrice: UILabel!
+    @IBOutlet private weak var buttonAdd: UIButton!
+    
+    private var model: ProductItemModel?
+    private var dataTask: URLSessionDataTask?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func prepareForReuse() {
+        dataTask?.cancel()
+        dataTask = nil
+        imageViewProduct.image = nil
+    }
+    
+    func configure(with model: ProductItemModel) {
+        self.model = model
+        dataTask = imageViewProduct.loadImage(url: model.url)
+        dataTask?.resume()
+        labelTitle.text = model.title
+        labelPrice.text = model.price
+    }
 
+    @IBAction private func actionAdd(_ sender: Any) {
+        model?.action?()
+    }
+    
 }
