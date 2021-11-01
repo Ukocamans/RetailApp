@@ -56,7 +56,7 @@ extension ProductListViewController: ProductListViewModelDelegate {
     func handleViewModelOutput(output: ProductListViewModelOutput) {
         switch output {
         case .setLoading(let isLoading):
-            print(isLoading)
+            isLoading ? LoadingManager.shared.show() : LoadingManager.shared.dismiss()
         case .finished:
             // do something
             collectionView.reloadData()
