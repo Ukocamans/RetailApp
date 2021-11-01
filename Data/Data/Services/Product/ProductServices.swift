@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-protocol ProductServicesProtocol {
+public protocol ProductServicesProtocol {
     func listing(completion: @escaping (NetworkResult<ProductListResponseModel>) -> Void)
 }
 

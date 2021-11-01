@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1C8013B8272F530700A0B374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8013B7272F530700A0B374 /* AppDelegate.swift */; };
-		1C8013BF272F530700A0B374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013BD272F530700A0B374 /* Main.storyboard */; };
 		1C8013C1272F530800A0B374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013C0272F530800A0B374 /* Assets.xcassets */; };
 		1C8013C4272F530800A0B374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8013C2272F530800A0B374 /* LaunchScreen.storyboard */; };
 		1C801426272F571300A0B374 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C801425272F571300A0B374 /* Core.framework */; };
@@ -24,12 +23,12 @@
 		1C80149A272FE82D00A0B374 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C801499272FE82D00A0B374 /* ProductListViewModel.swift */; };
 		1C8014A6272FF2BE00A0B374 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014A4272FF2BE00A0B374 /* ProductCell.swift */; };
 		1C8014A7272FF2BE00A0B374 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8014A5272FF2BE00A0B374 /* ProductCell.xib */; };
+		1C8014AD2730499C00A0B374 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8014AB2730499C00A0B374 /* ProductListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C8013B4272F530700A0B374 /* RetailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8013B7272F530700A0B374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C8013BE272F530700A0B374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C8013C0272F530800A0B374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C8013C3272F530800A0B374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C8013C5272F530800A0B374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		1C801499272FE82D00A0B374 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		1C8014A4272FF2BE00A0B374 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		1C8014A5272FF2BE00A0B374 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		1C8014AB2730499C00A0B374 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,6 @@
 		1C8013CE272F533D00A0B374 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				1C8013BD272F530700A0B374 /* Main.storyboard */,
 				1C8013C2272F530800A0B374 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -177,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				1C801490272FE80700A0B374 /* ProductListViewController.swift */,
+				1C8014AB2730499C00A0B374 /* ProductListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,8 +257,8 @@
 			files = (
 				1C8013C4272F530800A0B374 /* LaunchScreen.storyboard in Resources */,
 				1C8014A7272FF2BE00A0B374 /* ProductCell.xib in Resources */,
+				1C8014AD2730499C00A0B374 /* ProductListViewController.xib in Resources */,
 				1C8013C1272F530800A0B374 /* Assets.xcassets in Resources */,
-				1C8013BF272F530700A0B374 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +286,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C8013BD272F530700A0B374 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C8013BE272F530700A0B374 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1C8013C2272F530800A0B374 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
