@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Core
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, AlertPresentable {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var buttonOrder: UIButton!
     
     private var viewModel: CartViewModelProtocol!
     
@@ -36,6 +38,10 @@ class CartViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    @IBAction private func actionOrder(_ sender: Any) {
+        viewModel.order()
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .amountChanged, object: nil)
     }
@@ -60,10 +66,12 @@ extension CartViewController: CartViewModelDelegate {
         case .setLoading(let isLoading):
             isLoading ? LoadingManager.shared.show() : LoadingManager.shared.dismiss()
         case .finished:
-            // do something
+            CartManager.shared.clear()
+            showMessage(title: "Başarılı!", message: "Siparişiniz başarıyla verildi.", buttonTitle: "Tamam")
             tableView.reloadData()
         case .error(let error):
-            dump(error)
+            let action = AlertAction(title: "Tamam", style: .default, isPreffered: true, action: nil)
+            show(alert: Alert(title: "Hata", message: error.localizedDescription, actions: [action]), style: .alert)
         }
     }
 }

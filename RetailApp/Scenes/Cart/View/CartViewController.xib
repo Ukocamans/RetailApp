@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="RetailApp" customModuleProvider="target">
             <connections>
+                <outlet property="buttonOrder" destination="kUj-4z-Xcz" id="8RY-Qe-j9b"/>
                 <outlet property="tableView" destination="o0h-ml-Iq3" id="5RL-t9-JeD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,19 +21,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o0h-ml-Iq3">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="763"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-4z-Xcz">
+                    <rect key="frame" x="0.0" y="807" width="414" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="rc3-XL-Oku"/>
+                    </constraints>
+                    <state key="normal" title="Sipariş Ver"/>
+                    <connections>
+                        <action selector="actionOrder:" destination="-1" eventType="touchUpInside" id="EqH-09-CFf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="o0h-ml-Iq3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GPy-uu-SVe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kUj-4z-Xcz" secondAttribute="bottom" id="57w-1g-mzn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kUj-4z-Xcz" secondAttribute="trailing" id="6cc-sV-eo3"/>
+                <constraint firstItem="kUj-4z-Xcz" firstAttribute="top" secondItem="o0h-ml-Iq3" secondAttribute="bottom" id="6iH-vh-lgt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o0h-ml-Iq3" secondAttribute="trailing" id="KHd-gq-9j6"/>
+                <constraint firstItem="o0h-ml-Iq3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RfB-e1-KoS"/>
+                <constraint firstItem="kUj-4z-Xcz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bA3-f2-7Nd"/>
                 <constraint firstItem="o0h-ml-Iq3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bsd-oW-a73"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="o0h-ml-Iq3" secondAttribute="bottom" id="jo2-z0-EuC"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="68"/>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </view>
     </objects>
     <resources>

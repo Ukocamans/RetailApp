@@ -26,8 +26,14 @@ final class CartViewModel: CartViewModelProtocol {
         }
     }
     
+    private func createOrderRequestModel() -> OrderRequestModel {
+        CartManager.shared.cartItems.map { (model) -> OrderModel in
+            return OrderModel(id: model.productModel.id ?? -1, amount: model.amount)
+        }
+    }
+    
     func order() {
-        let requestModel: OrderRequestModel = []
+        let requestModel: OrderRequestModel = createOrderRequestModel()
         delegate?.handleViewModelOutput(output: .setLoading(true))
         cartServices.order(requestModel: requestModel) { [weak self] (result) in
             guard let self = self else {
@@ -36,7 +42,15 @@ final class CartViewModel: CartViewModelProtocol {
             self.delegate?.handleViewModelOutput(output: .setLoading(false))
             switch result {
             case .success(let model):
-                dump(model)
+                switch model.status {
+                case .success:
+                    self.delegate?.handleViewModelOutput(output: .finished)
+                case .failed:
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: model.message ?? ""])
+                    self.delegate?.handleViewModelOutput(output: .error(error))
+                default:
+                    print("something went wrong")
+                }
             case .failure(let error):
                 self.delegate?.handleViewModelOutput(output: .error(error))
                 dump(error)

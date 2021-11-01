@@ -34,7 +34,6 @@ class CartCell: UITableViewCell {
     override func prepareForReuse() {
         dataTask?.cancel()
         dataTask = nil
-        
     }
     
     func configure(with model: CartItemModel) {

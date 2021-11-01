@@ -51,4 +51,8 @@ final class CartManager {
             }
         }
     }
+    
+    func clear() {
+        cartItems = []
+    }
 }

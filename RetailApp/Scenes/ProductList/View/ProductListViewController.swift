@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Core
 
-final class ProductListViewController: UIViewController {
+final class ProductListViewController: UIViewController, AlertPresentable {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -61,7 +62,8 @@ extension ProductListViewController: ProductListViewModelDelegate {
             // do something
             collectionView.reloadData()
         case .error(let error):
-            dump(error)
+            let action = AlertAction(title: "Tamam", style: .default, isPreffered: true, action: nil)
+            show(alert: Alert(title: "Hata", message: error.localizedDescription, actions: [action]), style: .alert)
         case .askNavigationTo(let controller):
             navigationController?.show(controller, sender: nil)
         }
