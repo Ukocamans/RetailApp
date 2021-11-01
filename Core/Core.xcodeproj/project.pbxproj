@@ -11,7 +11,6 @@
 		1C80141D272F56ED00A0B374 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C801415272F56ED00A0B374 /* URLRequestBuilder.swift */; };
 		1C80141E272F56ED00A0B374 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C801416272F56ED00A0B374 /* HTTPMethod.swift */; };
 		1C80141F272F56ED00A0B374 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C801417272F56ED00A0B374 /* NetworkRequest.swift */; };
-		1C801420272F56ED00A0B374 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C801419272F56ED00A0B374 /* UserDefaultsManager.swift */; };
 		1C801421272F56ED00A0B374 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C80141B272F56ED00A0B374 /* NotificationNameExtension.swift */; };
 		1C801422272F56ED00A0B374 /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C80141C272F56ED00A0B374 /* CodableExtension.swift */; };
 		1CD87A252730820800DE3ED5 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A232730820800DE3ED5 /* AlertPresentable.swift */; };
@@ -25,7 +24,6 @@
 		1C801415272F56ED00A0B374 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		1C801416272F56ED00A0B374 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1C801417272F56ED00A0B374 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		1C801419272F56ED00A0B374 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		1C80141B272F56ED00A0B374 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		1C80141C272F56ED00A0B374 /* CodableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
 		1CD87A232730820800DE3ED5 /* AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			children = (
 				1C80141A272F56ED00A0B374 /* Extensions */,
 				1C801413272F56ED00A0B374 /* Infrastructure */,
-				1C801418272F56ED00A0B374 /* LocalStorage */,
 				1C801401272F569400A0B374 /* Core.h */,
 				1C801402272F569400A0B374 /* Info.plist */,
 			);
@@ -87,14 +84,6 @@
 				1C801417272F56ED00A0B374 /* NetworkRequest.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		1C801418272F56ED00A0B374 /* LocalStorage */ = {
-			isa = PBXGroup;
-			children = (
-				1C801419272F56ED00A0B374 /* UserDefaultsManager.swift */,
-			);
-			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 		1C80141A272F56ED00A0B374 /* Extensions */ = {
@@ -190,7 +179,6 @@
 				1C80141E272F56ED00A0B374 /* HTTPMethod.swift in Sources */,
 				1C80141F272F56ED00A0B374 /* NetworkRequest.swift in Sources */,
 				1C801422272F56ED00A0B374 /* CodableExtension.swift in Sources */,
-				1C801420272F56ED00A0B374 /* UserDefaultsManager.swift in Sources */,
 				1CD87A262730820800DE3ED5 /* AlertView.swift in Sources */,
 				1C80141D272F56ED00A0B374 /* URLRequestBuilder.swift in Sources */,
 				1C801421272F56ED00A0B374 /* NotificationNameExtension.swift in Sources */,
