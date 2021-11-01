@@ -36,6 +36,8 @@
 		1CD87A112730678500DE3ED5 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD87A0F2730678500DE3ED5 /* CartViewController.xib */; };
 		1CD87A15273068A600DE3ED5 /* CartContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A14273068A600DE3ED5 /* CartContracts.swift */; };
 		1CD87A18273068B400DE3ED5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A17273068B400DE3ED5 /* CartViewModel.swift */; };
+		1CD87A1F27306FC800DE3ED5 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A1D27306FC800DE3ED5 /* CartCell.swift */; };
+		1CD87A2027306FC800DE3ED5 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD87A1E27306FC800DE3ED5 /* CartCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		1CD87A0F2730678500DE3ED5 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		1CD87A14273068A600DE3ED5 /* CartContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContracts.swift; sourceTree = "<group>"; };
 		1CD87A17273068B400DE3ED5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		1CD87A1D27306FC800DE3ED5 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		1CD87A1E27306FC800DE3ED5 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 		1C80149D272FF28800A0B374 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1CD87A1B27306FA300DE3ED5 /* Table */,
 				1C80149E272FF29200A0B374 /* Collection */,
 			);
 			path = Cells;
@@ -221,9 +226,7 @@
 		1C80149E272FF29200A0B374 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				1C8014A4272FF2BE00A0B374 /* ProductCell.swift */,
-				1C8014A5272FF2BE00A0B374 /* ProductCell.xib */,
-				1C8014B127304CAD00A0B374 /* ProductItemModel.swift */,
+				1CD87A1A27306F9400DE3ED5 /* ProductCell */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -290,6 +293,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1CD87A1A27306F9400DE3ED5 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				1C8014A4272FF2BE00A0B374 /* ProductCell.swift */,
+				1C8014A5272FF2BE00A0B374 /* ProductCell.xib */,
+				1C8014B127304CAD00A0B374 /* ProductItemModel.swift */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		1CD87A1B27306FA300DE3ED5 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A1C27306FAB00DE3ED5 /* CartCell */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		1CD87A1C27306FAB00DE3ED5 /* CartCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A1D27306FC800DE3ED5 /* CartCell.swift */,
+				1CD87A1E27306FC800DE3ED5 /* CartCell.xib */,
+			);
+			path = CartCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8013C4272F530800A0B374 /* LaunchScreen.storyboard in Resources */,
+				1CD87A2027306FC800DE3ED5 /* CartCell.xib in Resources */,
 				1C8014A7272FF2BE00A0B374 /* ProductCell.xib in Resources */,
 				1C8014AD2730499C00A0B374 /* ProductListViewController.xib in Resources */,
 				1C8014B92730600E00A0B374 /* LoadingViewController.xib in Resources */,
@@ -378,6 +409,7 @@
 				1C8013B8272F530700A0B374 /* AppDelegate.swift in Sources */,
 				1C80149A272FE82D00A0B374 /* ProductListViewModel.swift in Sources */,
 				1CD87A15273068A600DE3ED5 /* CartContracts.swift in Sources */,
+				1CD87A1F27306FC800DE3ED5 /* CartCell.swift in Sources */,
 				1C801497272FE82100A0B374 /* ProductListContracts.swift in Sources */,
 				1C801492272FE80700A0B374 /* ProductListViewController.swift in Sources */,
 				1C8014CA273061C000A0B374 /* CartItemModel.swift in Sources */,

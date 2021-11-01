@@ -24,11 +24,20 @@ class CartViewController: UIViewController {
         
         title = "Sepetim"
         configureTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(amountChangedNotification(_:)), name: .amountChanged, object: nil)
+    }
+    
+    @objc func amountChangedNotification(_ notification: Notification) {
+        tableView.reloadData()
     }
     
     private func configureTableView() {
-        tableView.register(UITableViewCell.self)
+        tableView.register(CartCell.self)
         tableView.dataSource = self
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .amountChanged, object: nil)
     }
 }
 
@@ -38,7 +47,9 @@ extension CartViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: CartCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: CartManager.shared.cartItems[indexPath.row])
+        return cell
     }
 }
 

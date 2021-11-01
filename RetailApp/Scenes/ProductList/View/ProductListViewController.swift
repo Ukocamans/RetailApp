@@ -62,6 +62,8 @@ extension ProductListViewController: ProductListViewModelDelegate {
             collectionView.reloadData()
         case .error(let error):
             dump(error)
+        case .askNavigationTo(let controller):
+            navigationController?.show(controller, sender: nil)
         }
     }
 }

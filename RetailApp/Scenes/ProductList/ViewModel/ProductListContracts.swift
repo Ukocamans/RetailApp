@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ProductListViewModelProtocol {
     var delegate: ProductListViewModelDelegate? { get set }
@@ -21,4 +22,5 @@ enum ProductListViewModelOutput {
     case setLoading(Bool)
     case finished
     case error(Error)
+    case askNavigationTo(UIViewController)
 }

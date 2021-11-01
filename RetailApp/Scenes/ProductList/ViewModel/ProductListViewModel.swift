@@ -20,8 +20,11 @@ final class ProductListViewModel: ProductListViewModelProtocol {
     private func createProductItems(model: ProductListResponseModel) -> [ProductItemModel] {
         return model.map { (productModel) -> ProductItemModel in
             var model = ProductItemModel(with: productModel)
-            model.action = {
+            model.action = { [weak self] in
                 CartManager.shared.add(productModel: model)
+                let viewModel = CartViewModel(cartServices: CartServices())
+                let controller = CartViewController(viewModel: viewModel)
+                self?.delegate?.handleViewModelOutput(output: .askNavigationTo(controller))
             }
             return model
         }

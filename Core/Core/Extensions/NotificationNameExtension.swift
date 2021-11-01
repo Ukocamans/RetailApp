@@ -8,5 +8,5 @@
 import Foundation
 
 public extension Notification.Name {
-    static let favorite = Notification.Name(rawValue: "favorite")
+    static let amountChanged = Notification.Name(rawValue: "amountChanged")
 }

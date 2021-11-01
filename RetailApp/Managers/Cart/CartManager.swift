@@ -17,7 +17,7 @@ final class CartManager {
     func add(productModel: ProductItemModel) {
         var found = false
         cartItems.forEach { (cartItem) in
-            if productModel.id == cartItem.id {
+            if productModel.id == cartItem.productModel.id {
                 cartItem.amount += 1
                 found = true
             }
@@ -26,15 +26,17 @@ final class CartManager {
             let model = CartItemModel(model: productModel)
             cartItems.append(model)
         }
+        NotificationCenter.default.post(name: .amountChanged, object: nil, userInfo: nil)
     }
     
     func substract(productModel: ProductItemModel) {
         cartItems.enumerated().forEach { (index, cartItem) in
-            if productModel.id == cartItem.id {
+            if productModel.id == cartItem.productModel.id  {
                 cartItem.amount -= 1
                 if cartItem.amount == 0 {
                     cartItems.remove(at: index)
                 }
+                NotificationCenter.default.post(name: .amountChanged, object: nil, userInfo: nil)
                 return
             }
         }
@@ -42,8 +44,9 @@ final class CartManager {
     
     func remove(productModel: ProductItemModel) {
         cartItems.enumerated().forEach { (index, cartItem) in
-            if productModel.id == cartItem.id {
+            if productModel.id == cartItem.productModel.id  {
                 cartItems.remove(at: index)
+                NotificationCenter.default.post(name: .amountChanged, object: nil, userInfo: nil)
                 return
             }
         }

@@ -8,15 +8,11 @@
 import Foundation
 
 final class CartItemModel {
-    let title: String
+    let productModel: ProductItemModel
     var amount: Int
-    let price: String
-    let id: Int
     
     init(model: ProductItemModel) {
-        self.title = model.title ?? ""
+        self.productModel = model
         self.amount = 1
-        self.price = model.price ?? ""
-        self.id = model.id ?? -1
     }
 }
