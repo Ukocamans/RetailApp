@@ -59,7 +59,6 @@ extension ProductListViewController: ProductListViewModelDelegate {
         case .setLoading(let isLoading):
             isLoading ? LoadingManager.shared.show() : LoadingManager.shared.dismiss()
         case .finished:
-            // do something
             collectionView.reloadData()
         case .error(let error):
             let action = AlertAction(title: "Tamam", style: .default, isPreffered: true, action: nil)

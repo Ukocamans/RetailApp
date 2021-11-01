@@ -38,7 +38,18 @@
 		1CD87A18273068B400DE3ED5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A17273068B400DE3ED5 /* CartViewModel.swift */; };
 		1CD87A1F27306FC800DE3ED5 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A1D27306FC800DE3ED5 /* CartCell.swift */; };
 		1CD87A2027306FC800DE3ED5 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD87A1E27306FC800DE3ED5 /* CartCell.xib */; };
+		1CD87A2F273085D500DE3ED5 /* RetailAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CD87A31273085D500DE3ED5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C8013AC272F530700A0B374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8013B3272F530700A0B374;
+			remoteInfo = RetailApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C8013B4272F530700A0B374 /* RetailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +85,9 @@
 		1CD87A17273068B400DE3ED5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		1CD87A1D27306FC800DE3ED5 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		1CD87A1E27306FC800DE3ED5 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		1CD87A2C273085D500DE3ED5 /* RetailAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailAppTests.swift; sourceTree = "<group>"; };
+		1CD87A30273085D500DE3ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CD87A29273085D500DE3ED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1C8013B6272F530700A0B374 /* RetailApp */,
+				1CD87A2D273085D500DE3ED5 /* RetailAppTests */,
 				1C8013B5272F530700A0B374 /* Products */,
 				1C801424272F571300A0B374 /* Frameworks */,
 			);
@@ -102,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1C8013B4272F530700A0B374 /* RetailApp.app */,
+				1CD87A2C273085D500DE3ED5 /* RetailAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,6 +343,15 @@
 			path = CartCell;
 			sourceTree = "<group>";
 		};
+		1CD87A2D273085D500DE3ED5 /* RetailAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CD87A2E273085D500DE3ED5 /* RetailAppTests.swift */,
+				1CD87A30273085D500DE3ED5 /* Info.plist */,
+			);
+			path = RetailAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,6 +372,24 @@
 			productReference = 1C8013B4272F530700A0B374 /* RetailApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1CD87A2B273085D500DE3ED5 /* RetailAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD87A33273085D500DE3ED5 /* Build configuration list for PBXNativeTarget "RetailAppTests" */;
+			buildPhases = (
+				1CD87A28273085D500DE3ED5 /* Sources */,
+				1CD87A29273085D500DE3ED5 /* Frameworks */,
+				1CD87A2A273085D500DE3ED5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CD87A32273085D500DE3ED5 /* PBXTargetDependency */,
+			);
+			name = RetailAppTests;
+			productName = RetailAppTests;
+			productReference = 1CD87A2C273085D500DE3ED5 /* RetailAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -351,6 +401,10 @@
 				TargetAttributes = {
 					1C8013B3272F530700A0B374 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					1CD87A2B273085D500DE3ED5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1C8013B3272F530700A0B374;
 					};
 				};
 			};
@@ -368,6 +422,7 @@
 			projectRoot = "";
 			targets = (
 				1C8013B3272F530700A0B374 /* RetailApp */,
+				1CD87A2B273085D500DE3ED5 /* RetailAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +439,13 @@
 				1C8014B92730600E00A0B374 /* LoadingViewController.xib in Resources */,
 				1CD87A112730678500DE3ED5 /* CartViewController.xib in Resources */,
 				1C8013C1272F530800A0B374 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD87A2A273085D500DE3ED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +481,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CD87A28273085D500DE3ED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD87A2F273085D500DE3ED5 /* RetailAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CD87A32273085D500DE3ED5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C8013B3272F530700A0B374 /* RetailApp */;
+			targetProxy = 1CD87A31273085D500DE3ED5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1C8013C2272F530800A0B374 /* LaunchScreen.storyboard */ = {
@@ -585,6 +663,44 @@
 			};
 			name = Release;
 		};
+		1CD87A34273085D500DE3ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetailAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ukocaman.RetailApp.RetailAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetailApp.app/RetailApp";
+			};
+			name = Debug;
+		};
+		1CD87A35273085D500DE3ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetailAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ukocaman.RetailApp.RetailAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetailApp.app/RetailApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +718,15 @@
 			buildConfigurations = (
 				1C8013C9272F530800A0B374 /* Debug */,
 				1C8013CA272F530800A0B374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD87A33273085D500DE3ED5 /* Build configuration list for PBXNativeTarget "RetailAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD87A34273085D500DE3ED5 /* Debug */,
+				1CD87A35273085D500DE3ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

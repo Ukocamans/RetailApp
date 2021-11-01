@@ -53,7 +53,6 @@ final class CartViewModel: CartViewModelProtocol {
                 }
             case .failure(let error):
                 self.delegate?.handleViewModelOutput(output: .error(error))
-                dump(error)
             case .empty:
                 print("empty")
             }
