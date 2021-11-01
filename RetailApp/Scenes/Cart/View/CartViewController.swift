@@ -30,6 +30,9 @@ class CartViewController: UIViewController, AlertPresentable {
     }
     
     @objc func amountChangedNotification(_ notification: Notification) {
+        if CartManager.shared.cartItems.isEmpty {
+            navigationController?.popViewController(animated: true)
+        }
         tableView.reloadData()
     }
     
@@ -67,8 +70,12 @@ extension CartViewController: CartViewModelDelegate {
             isLoading ? LoadingManager.shared.show() : LoadingManager.shared.dismiss()
         case .finished:
             CartManager.shared.clear()
+            if CartManager.shared.cartItems.isEmpty {
+                navigationController?.popViewController(animated: true)
+            }
             showMessage(title: "Başarılı!", message: "Siparişiniz başarıyla verildi.", buttonTitle: "Tamam")
             tableView.reloadData()
+            
         case .error(let error):
             let action = AlertAction(title: "Tamam", style: .default, isPreffered: true, action: nil)
             show(alert: Alert(title: "Hata", message: error.localizedDescription, actions: [action]), style: .alert)
