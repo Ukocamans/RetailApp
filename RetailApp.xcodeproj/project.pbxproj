@@ -30,6 +30,8 @@
 		1C8014BD2730603900A0B374 /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014BC2730603900A0B374 /* LoadingManager.swift */; };
 		1C8014C12730604C00A0B374 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014BF2730604C00A0B374 /* UIApplicationExtension.swift */; };
 		1C8014C22730604C00A0B374 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C02730604C00A0B374 /* UIViewControllerExtension.swift */; };
+		1C8014C52730612A00A0B374 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C42730612A00A0B374 /* CartManager.swift */; };
+		1C8014CA273061C000A0B374 /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8014C9273061C000A0B374 /* CartItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		1C8014BC2730603900A0B374 /* LoadingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
 		1C8014BF2730604C00A0B374 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1C8014C02730604C00A0B374 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1C8014C42730612A00A0B374 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		1C8014C9273061C000A0B374 /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 		1C8014B427305FC900A0B374 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1C8014C8273061B500A0B374 /* Cart */,
 				1C8014BC2730603900A0B374 /* LoadingManager.swift */,
 			);
 			path = Managers;
@@ -238,6 +243,15 @@
 				1C8014B72730600E00A0B374 /* LoadingViewController.xib */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		1C8014C8273061B500A0B374 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				1C8014C42730612A00A0B374 /* CartManager.swift */,
+				1C8014C9273061C000A0B374 /* CartItemModel.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8014C52730612A00A0B374 /* CartManager.swift in Sources */,
 				1C80147A272FE47C00A0B374 /* UIViewExtension.swift in Sources */,
 				1C8014A6272FF2BE00A0B374 /* ProductCell.swift in Sources */,
 				1C8014BD2730603900A0B374 /* LoadingManager.swift in Sources */,
@@ -325,6 +340,7 @@
 				1C80149A272FE82D00A0B374 /* ProductListViewModel.swift in Sources */,
 				1C801497272FE82100A0B374 /* ProductListContracts.swift in Sources */,
 				1C801492272FE80700A0B374 /* ProductListViewController.swift in Sources */,
+				1C8014CA273061C000A0B374 /* CartItemModel.swift in Sources */,
 				1C8014C12730604C00A0B374 /* UIApplicationExtension.swift in Sources */,
 				1C8014BA2730600E00A0B374 /* LoadingViewController.swift in Sources */,
 				1C801481272FE4FA00A0B374 /* BaseView.swift in Sources */,
